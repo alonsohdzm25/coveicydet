@@ -1,4 +1,4 @@
-<link href="produccion-cientifica.component.css" />
+<link href="proyectos-investigacion.component.css" />
 <link href="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/styles.css?alt=media&token=5cb58561-558c-414b-893e-b2cedcf41969" rel="stylesheet" />
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -10,7 +10,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" routerLink="/produccion-cientifica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" routerLink="/proyectos-de-investigacion" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Datos Generales 
             </a>
             <ul class="dropdown-menu">
@@ -23,7 +23,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" routerLink="/produccion-cientifica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" routerLink="/proyectos-de-investigacion" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Producción cientifica 
             </a>
             <ul class="dropdown-menu">
@@ -40,7 +40,7 @@
           </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" routerLink="/produccion-cientifica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" routerLink="/proyectos-de-investigacion" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Documentos 
             </a>
             <ul class="dropdown-menu">
@@ -56,7 +56,7 @@
               <a class="nav-link disabled"> Tiempo: 30:00 </a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" routerLink="/produccion-cientifica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" routerLink="/proyectos-de-investigacion" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Guias 
             </a>
             <ul class="dropdown-menu">
@@ -79,66 +79,152 @@
 
    <div class="input_div">                             
     <div>
-      <label form="titulo_input">Título</label>
+      <label form="referencia_input">Referencia</label>
       <input
-        [(ngModel)] = "libros.titulo"
-        name = "titulo"
+        [(ngModel)] = "proyecto.referencia"
+        name = "referencia"
         type="text"
-        class="form_input mayuscula" 
-        id="tiutlo_input"
-        placeholder="Titulo"
-        maxlength="50"
+        class="form_input" 
+        id="referencia_input"
+        placeholder="Referencia"
+        maxlength="20"
         required 
         />
    </div>
 
      <div>
-       <label form="autor_input">Autor</label>
+       <label form="titulo_input">Titulo</label>
        <input 
-          [(ngModel)] = "libros.autor"
-          name = "autor"
+          [(ngModel)] = "proyecto.titulo"
+          name = "titulo"
           type="text"
           class="form_input mayuscula" 
-          id="autor_input"
-          placeholder="Autor"
+          id="titulo_input"
+          placeholder="Titulo"
           maxlength="50"
           required 
       />
      </div>
      <div>
-      <label form="editorial_input">Editorial</label>
+      <label form="participacion_input">Participació</label>
       <input 
-         [(ngModel)] = "libros.editorial"
-         name = "editorial"
+         [(ngModel)] = "proyecto.participacion"
+         name = "participacion"
          type="text"
          class="form_input mayuscula" 
-         id="editorial_input"
-         placeholder="Editorial"
+         id="participacion_input"
+         placeholder="Participación"
          maxlength="50"
          required 
        />
    </div>
   </div>
    
-   <div class="input_div">
+  <div class="input_div">
     <div>
-       <label form="referencia_input">Referencia</label>
-       <input
-          [(ngModel)] = "libros.referencia"
-          name = "referencia"
-          type="text"
-          class="form_input mayuscula" 
-          id="referencia_input"
-          placeholder="Referencia"
-          maxlength="20"
-          required 
-        />
+      <label form="fechaInicio_input">Fecha inicio</label>
+      <input 
+         [(ngModel)] = "proyecto.fechaInicio"
+         name = "fechaInicio"
+         type="date"
+         class="form_input" 
+         id="fechaInicio_input"
+         placeholder="Fecha inicio"
+         required 
+       />
     </div>
-    <div style="visibility: hidden;">
-      <input/>
+    <div>
+      <label form="fechaTermino_input">Fecha termino</label>
+      <input 
+         [(ngModel)] = "proyecto.fechaTermino"
+         name = "fechaTermino"
+         type="date"
+         class="form_input" 
+         id="fechaTermino_input"
+         placeholder="Fecha Termino"
+         required 
+       />
    </div>
-   <div style="visibility: hidden;">
-    <input/>
+   <div>
+    <label form="area_input">Area</label>
+      <input 
+         [(ngModel)] = "proyecto.area"
+         name = "area"
+         type="text"
+         class="form_input mayuscula" 
+         id="area_input"
+         placeholder="Area"
+         maxlength="50"
+         required 
+       />
+   </div>
+  </div>
+
+  <div class="input_div">
+    <div>
+      <label form="institucionPrincipal_input">Institución Principal</label>
+      <input 
+         [(ngModel)] = "proyecto.institucionPrincipal"
+         name = "institucionPrincipal"
+         type="text"
+         class="form_input mayuscula" 
+         id="institucionPrincipal_input"
+         placeholder="Institución Principal"
+         required 
+       />
+    </div>
+    <div>
+      <label form="institucionAsociada_input">Instituciones Asociadas</label>
+      <input 
+         [(ngModel)] = "proyecto.institucionAsociada"
+         name = "institucionAsociada"
+         type="text"
+         class="form_input mayuscula" 
+         id="institucionAsociada_input"
+         placeholder="Instituciones Asociadas"
+         required 
+       />
+   </div>
+   <div>
+    <label form="fuenteFinanciamineto_input">Fuente de financiamiento</label>
+    <select name="mySelect" [(ngModel)] = "proyecto.fuenteFinanciamiento">
+      <option disabled selected>Selecciona una opción</option>
+      <option *ngFor="let item of fuente"  [value]="item" >{{item}}</option>
+    </select>
+   </div>
+  </div>
+
+  <div class="input_div">
+    <div>
+      <label for="montoFinanciamiento_input">Monto del financiamiento</label>
+      <input 
+         [(ngModel)] = "proyecto.montoFinanciamiento"
+         name = "montoFinanciamiento"
+         type="number"
+         class="form_input" 
+         id="montoFinanciamiento_input"
+         placeholder="Monto del financiamiento"
+         required 
+       />
+    </div>
+    <div>
+      <label for="usuarios_input">Usuarios</label>
+      <input 
+         [(ngModel)] = "proyecto.usuarios"
+         name = "usuarios"
+         type="text"
+         class="form_input mayuscula" 
+         id="usuarios_input"
+         placeholder="Usuarios"
+         required 
+       />
+   </div>
+   <div>
+    <label form="productosDerivados_input">Productos derivados</label>
+    <select name="mySelect" [(ngModel)] = "proyecto.productosDerivados">
+      <option disabled selected>Selecciona una opción</option>
+      <option *ngFor="let item of producto"  [value]="item" >{{item}}</option>
+    </select>
    </div>
   </div>
 
@@ -151,16 +237,14 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col">Titulo</th>
-        <th scope="col">Autor</th>
-        <th scope="col">Editorial</th>
-        <th scope="col">Referencia</th>
+        <th scope="col">Fecha inicio</th>
+        <th scope="col">Fecha termino</th>
         <th scope="col">Editar</th>
         <th scope="col">Eliminar</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td> Lorem ipsum </td>
         <td> Lorem ipsum </td>
         <td> Lorem ipsum </td>
         <td> Lorem ipsum </td>
@@ -171,12 +255,10 @@
         <td> Lorem ipsum </td>
         <td> Lorem ipsum </td>
         <td> Lorem ipsum </td>
-        <td> Lorem ipsum </td>
         <td> edit </td>
         <td> delete </td>
       </tr>
       <tr>
-        <td> Lorem ipsum </td>
         <td> Lorem ipsum </td>
         <td> Lorem ipsum </td>
         <td> Lorem ipsum </td>

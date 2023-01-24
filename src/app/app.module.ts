@@ -23,6 +23,15 @@ import { DomicilioComponent } from './layout/private/domicilio/domicilio.compone
 import { ContactoComponent } from './layout/private/contacto/contacto.component';
 import { AreaDesarrolloComponent } from './layout/private/area-desarrollo/area-desarrollo.component';
 import { FormacionAcademicaComponent } from './layout/private/formacion-academica/formacion-academica.component';
+import { ProyectosInvestigacionComponent } from './layout/private/proyectos-investigacion/proyectos-investigacion.component';
+import { PatentesComponent } from './layout/private/patentes/patentes.component';
+import { ArticulosRevistaIndexadaComponent } from './layout/private/articulos-revista-indexada/articulos-revista-indexada.component';
+import { ArticulosDivulgacionCientificaComponent } from './layout/private/articulos-divulgacion-cientifica/articulos-divulgacion-cientifica.component';
+import { ImplementacionTecnologicaComponent } from './layout/private/implementacion-tecnologica/implementacion-tecnologica.component';
+import { GradosAcademicosPnpcComponent } from './layout/private/grados-academicos-pnpc/grados-academicos-pnpc.component';
+import { FormaObtencionGradosComponent } from './layout/private/forma-obtencion-grados/forma-obtencion-grados.component';
+import { SniComponent } from './layout/private/sni/sni.component';
+import { EstanciasComponent } from './layout/private/estancias/estancias.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +46,15 @@ import { FormacionAcademicaComponent } from './layout/private/formacion-academic
     ContactoComponent,
     AreaDesarrolloComponent,
     FormacionAcademicaComponent,
+    ProyectosInvestigacionComponent,
+    PatentesComponent,
+    ArticulosRevistaIndexadaComponent,
+    ArticulosDivulgacionCientificaComponent,
+    ImplementacionTecnologicaComponent,
+    GradosAcademicosPnpcComponent,
+    FormaObtencionGradosComponent,
+    SniComponent,
+    EstanciasComponent,
   ],
   imports: [
     BrowserModule,

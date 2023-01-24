@@ -27,17 +27,17 @@
                   Producción cientifica 
               </a>
               <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" routerLink="/produccion-cientifica">Autoria/Coautoria de Libros</a></li>
-                  <li><a class="dropdown-item" routerLink="/proyectos-de-investigacion">Proyectos de Investigación</a></li>
-                  <li><a class="dropdown-item" routerLink="/patentes">Patentes</a></li>
-                  <li><a class="dropdown-item" routerLink="/articulos-revista-indexada">Articulos de Revista Indexada</a></li>
-                  <li><a class="dropdown-item" routerLink="/articulos-revista-de-divulgacion">Articulos de Revista de Divulgación Cientifica</a></li>
-                  <li><a class="dropdown-item" routerLink="implementacion-tecnologica">Implementación Tecnológica</a></li>
-                  <li><a class="dropdown-item" routerLink="grados-academicos-pnpc">Grados Academicos en PNPC</a></li>
-                  <li><a class="dropdown-item" routerLink="forma-obtencion-grados">Forma de Obtención de Grados</a></li>
-                  <li><a class="dropdown-item" routerLink="sni">SNI</a></li>
-                  <li><a class="dropdown-item" routerLink="estancias">Estancias</a></li>
-              </ul>
+                <li><a class="dropdown-item" routerLink="/produccion-cientifica">Autoria/Coautoria de Libros</a></li>
+                <li><a class="dropdown-item" routerLink="/proyectos-de-investigacion">Proyectos de Investigación</a></li>
+                <li><a class="dropdown-item" routerLink="/patentes">Patentes</a></li>
+                <li><a class="dropdown-item" routerLink="/articulos-revista-indexada">Articulos de Revista Indexada</a></li>
+                <li><a class="dropdown-item" routerLink="/articulos-revista-de-divulgacion">Articulos de Revista de Divulgación Cientifica</a></li>
+                <li><a class="dropdown-item" routerLink="/implementacion-tecnologica">Implementación Tecnológica</a></li>
+                <li><a class="dropdown-item" routerLink="/grados-academicos-pnpc">Grados Academicos en PNPC</a></li>
+                <li><a class="dropdown-item" routerLink="/forma-obtencion-grados">Forma de Obtención de Grados</a></li>
+                <li><a class="dropdown-item" routerLink="/sni">SNI</a></li>
+                <li><a class="dropdown-item" routerLink="/estancias">Estancias</a></li>
+            </ul>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" routerLink="/formacion-academica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -138,34 +138,48 @@
        </div>
       </div>
       <div class="button_div">
-        <button id="next_button" type="submit" class="btn btn_success">Guardar</button>
+        <button type="submit" class="btn btn_success">Guardar</button>
+        <button id="next_button" class="btn btn_success">Cancelar</button>
       </div>
 
-      <table class="table-content" border="1">
-  
-        <tr>
-          <th>Nivel</th>
-          <th>Título</th>
-          <th>Institución</th>
-          <th>Año </th>
-          <th>Eliminar</th>
-        </tr>
-    
-        <tr>
-          <th>null</th>
-          <td>null </td>
-          <td> null</td>
-          <td> null</td>
-        </tr>
-      
-        <tr>
-          <th>null</th>
-          <td>null </td>
-          <td> null</td>
-          <td> null</td>
-        </tr>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Nivel</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Institución</th>
+            <th scope="col">Año</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> Lorem ipsum </td>
+            <td> Lorem ipsum </td>
+            <td> Lorem ipsum </td>
+            <td> Lorem ipsum </td>
+            <td> edit </td>
+            <td> delete</td>
+          </tr>
+          <tr>
+            <td> Lorem ipsum </td>
+            <td> Lorem ipsum </td>
+            <td> Lorem ipsum </td>
+            <td> Lorem ipsum </td>
+            <td> edit </td>
+            <td> delete </td>
+          </tr>
+          <tr>
+            <td> Lorem ipsum </td>
+            <td> Lorem ipsum </td>
+            <td> Lorem ipsum </td>
+            <td> Lorem ipsum </td>
+            <td> edit </td>
+            <td> delete </td>
+          </tr>
+        </tbody>
       </table>
-    
        <div class="button_div">
          <button id="next_button" type="submit" routerLink="/produccion-cientifica">Siguiente</button>
       </div>

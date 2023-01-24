@@ -8,13 +8,31 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class ProduccionCientificaComponent implements OnInit {
 
+  libros : {
+    titulo: '',
+    autor: '',
+    editorial: '',
+    referencia: ''
+  }
+
   constructor(
     private authService: AuthService
-  ) { }
+  ) { 
+    this.libros = {
+      titulo: '',
+      autor: '',
+      editorial: '',
+      referencia: ''
+    }
+  }
 
   ngOnInit(): void {
   }
   salir() {
     this.authService.logout();
+  }
+
+  guardar() {
+    
   }
 }
