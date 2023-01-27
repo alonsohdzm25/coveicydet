@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstanciasComponent implements OnInit {
 
-  estancia: {
+  estancia = {
     institucion: '',
     proyecto: '',
     fechaInicio: '',
@@ -15,15 +15,7 @@ export class EstanciasComponent implements OnInit {
     referencia: ''
   }
 
-  constructor() { 
-    this.estancia = {
-      institucion: '',
-      proyecto: '',
-      fechaInicio: '',
-      fechaTermino: '',
-      referencia: ''
-    }
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }

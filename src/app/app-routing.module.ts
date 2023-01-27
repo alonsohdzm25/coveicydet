@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 //Components
 import { LoginComponent } from './layout/public/login/login.component';
 import { RegistroComponent } from './layout/public/registro/registro.component';
-import { RecuperarPasswordComponent } from './layout/public/recuperar-password/recuperar-password.component';
 import { DatosGeneralesComponent } from './layout/private/datos-generales/datos-generales.component';
 import { ProduccionCientificaComponent } from './layout/private/produccion-cientifica/produccion-cientifica.component';
 import { DocumentosComponent } from './layout/private/documentos/documentos.component';
@@ -29,7 +28,6 @@ const routes: Routes = [
   { path:'', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
-  { path: 'recuperar-acceso', component: RecuperarPasswordComponent },
   { path: 'datos-generales', component: DatosGeneralesComponent, canActivate:[AuthGuard] },
   { path: 'produccion-cientifica', component: ProduccionCientificaComponent, canActivate:[AuthGuard] },
   { path: 'documentos', component: DocumentosComponent, canActivate:[AuthGuard]},

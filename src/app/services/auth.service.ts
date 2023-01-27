@@ -7,18 +7,18 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  private URL = 'https://api-production-3b7e.up.railway.app/api'
+  private URL = 'https://backend-production-761e.up.railway.app/api'
   constructor( 
     private http: HttpClient,
     private router : Router
     ) {  }
 
   signUp(user: any) {
-    return this.http.post<any>(this.URL + '/register', user);
+    return this.http.post<any>(this.URL + '/auth/register', user);
   }
 
   signIn(user: any) {
-    return this.http.post<any>(this.URL+'/signin', user);
+    return this.http.post<any>(this.URL+'/auth/signin', user);
   }
 
   loggedIn() {

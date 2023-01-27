@@ -40,7 +40,7 @@
                     Ingrese su contraseña
                 </div>
                 <div id="forget_pass">
-                    <a routerLink="/recuperar-acceso">Olvide mi contraseña</a>
+                    <a routerLink="/#" data-bs-toggle="modal" data-bs-target="#exampleModal">Olvide mi contraseña</a>
                 </div>
 
             </div>
@@ -53,4 +53,21 @@
             </div>
         </form>
     </div>
+</div>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Recuperación de contraseña</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        Por el momento esta función no se encuetra disponible, si desea recuperar su contraseña por favor comuniquese al correo electronico soporte@coveicydet.com.
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+    </div>
+</div>
 </div>

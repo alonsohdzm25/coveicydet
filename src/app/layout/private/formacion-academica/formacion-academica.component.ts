@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class FormacionAcademicaComponent implements OnInit {
 
-  formacion: {
+  formacion = {
     nivel: '',
     titulo: '',
     institucion: '',
@@ -19,14 +19,7 @@ export class FormacionAcademicaComponent implements OnInit {
 
   constructor(
     private authService: AuthService
-  ) { 
-    this.formacion ={
-      nivel: '',
-      titulo: '',
-      institucion: '',
-      anio: ''
-    }
-   }
+  ) {}
 
   ngOnInit(): void {
   }

@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  user: {
+  user = {
     email: '',
     password: ''
   }
@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
     private fb:FormBuilder,
     private authService: AuthService,
     private router: Router) {
-    this.user = {email:'', password:''}
     }
 
   ngOnInit(): void {
@@ -44,17 +43,17 @@ export class LoginComponent implements OnInit {
     }
 
     this.authService.signIn(this.user)
-      .subscribe(
-        res => {
-          console.log(res)
-          localStorage.setItem('token', res.token);
-          this.router.navigate(['/datos-generales'])
+      .subscribe({
+        next: res => {
+            console.log(res)
+            localStorage.setItem('token', res.token);
+            this.router.navigate(['/datos-generales'])
         },
-        err => {
-          alert(err.error)
+        error: err => {
+          alert(err.error.message)
         }
-      )
-
+      })
+ 
   }
 
   public get f() : any {

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImplementacionTecnologicaComponent implements OnInit {
 
-  implementacion : {
+  implementacion = {
     tipo: '',
     nombreProducto: '',
     noRegistro: '',
@@ -15,15 +15,7 @@ export class ImplementacionTecnologicaComponent implements OnInit {
     referencia: ''
     }
 
-  constructor() { 
-    this.implementacion = {
-      tipo: '',
-      nombreProducto: '',
-      noRegistro: '',
-      fechaRegistro: '',
-      referencia: ''
-      }
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }

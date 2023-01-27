@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticulosRevistaIndexadaComponent implements OnInit {
 
-  articulo: {
+  articulo = {
     titulo: '',
     autor: '',
     fechaAceptado: '',
@@ -19,17 +19,7 @@ export class ArticulosRevistaIndexadaComponent implements OnInit {
 
     lista = ["Thomson Reuters Master Journal List", "Journal Citation Report", "Indice de Revistas"]
 
-  constructor() { 
-    this.articulo = {
-      titulo: '',
-      autor: '',
-      fechaAceptado: '',
-      fechaPublicado: '',
-      revista: '',
-      pertenece: '',
-      referencia: ''
-      }
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }

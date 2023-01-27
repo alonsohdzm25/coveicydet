@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProyectosInvestigacionComponent implements OnInit {
 
-  proyecto: {
+  proyecto = {
     referencia: '',
     titulo: '',
     participacion: '',
@@ -25,20 +25,7 @@ export class ProyectosInvestigacionComponent implements OnInit {
     fuente = ["Gobierno federal","Gobierno estatal", "CONACYT", "ONG", "FOMIX", "Institucion perteneciente","Otro"]
     producto = ["Reporte tecnico", "Prototipo", "Publicación"]
   constructor() { 
-    this.proyecto = {
-      referencia: '',
-      titulo: '',
-      participacion: '',
-      fechaInicio: '',
-      fechaTermino: '',
-      area: '',
-      institucionPrincipal: '',
-      institucionAsociada: '',
-      fuenteFinanciamiento:'',
-      montoFinanciamiento: '',
-      productosDerivados:'',
-      usuarios: ''
-      }
+    
    }
 
   ngOnInit(): void {

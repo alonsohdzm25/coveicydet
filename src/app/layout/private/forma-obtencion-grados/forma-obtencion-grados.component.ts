@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormaObtencionGradosComponent implements OnInit {
 
-  obtencion: {
+  obtencion = {
     nombreTesis: '',
     institucion: '',
     anio: '',
@@ -17,15 +17,7 @@ export class FormaObtencionGradosComponent implements OnInit {
 
   nivel = ["Especialidad", "Maestria", "Doctorado"]
 
-  constructor() { 
-    this.obtencion = {
-      nombreTesis: '',
-      institucion: '',
-      anio: '',
-      nivel: '',
-      referencia: ''
-    }
-   }
+  constructor() { }
 
   ngOnInit(): void {
   }

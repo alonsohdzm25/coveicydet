@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatentesComponent implements OnInit {
 
-  patente : {
+  patente = {
     tipo: '',
     nombreProducto: '',
     numeroRegistro: '',
@@ -15,15 +15,7 @@ export class PatentesComponent implements OnInit {
     referencia: ''
   }
 
-  constructor() { 
-    this.patente = {
-      tipo: '',
-      nombreProducto: '',
-      numeroRegistro: '',
-      fecha: '',
-      referencia: ''
-    }
-   }
+  constructor() { }
 
   ngOnInit(): void {
   }

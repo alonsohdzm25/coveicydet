@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class ContactoComponent implements OnInit {
 
-  contacto: {
+  contacto = {
     correoPersonal: '',
     correoInstitucional: '',
     telefono: '',
@@ -20,14 +20,6 @@ export class ContactoComponent implements OnInit {
   constructor(
     private authService: AuthService
   ) { 
-    this.contacto = {
-      correoPersonal: '',
-      correoInstitucional: '',
-      telefono: '',
-      celular: '',
-      institucionLaboral: '',
-      adscripcion: ''
-    }
   }
 
   ngOnInit(): void {

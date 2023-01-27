@@ -74,7 +74,7 @@
 </nav>
 
 <div class="main_div">
-  <form class="general_form" (submit)="guardar()">
+  <form  id="user_form" class="general_form" (submit)="guardar()">
     <h1>Información Personal</h1> 
    
   <div class="input_div"> 
@@ -159,7 +159,7 @@
  </div>
 
  <div class="button_div">
-   <button type="submit" class="btn btn_success">Guardar</button>
+   <button type="submit" class="btn btn_success" (click)="guardar()">Guardar</button>
    <button id="next_button" type="submit" routerLink="/lugar-de-nacimiento">Siguiente</button>
 </div>
 

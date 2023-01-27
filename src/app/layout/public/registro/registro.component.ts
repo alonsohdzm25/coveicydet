@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class RegistroComponent implements OnInit {
 
-  user: {
+  user = {
     nombre: '',
     apellidoPaterno: '',
     apellidoMaterno: '',
@@ -24,16 +24,6 @@ export class RegistroComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private router: Router) { 
-    this.user = {
-      nombre: '',
-      apellidoPaterno: '',
-      apellidoMaterno: '',
-      rfc: '',
-      email: '',
-      emailConfirm: '',
-      password: '',
-      passwordConfirm: ''
-    }
   }
 
   ngOnInit() {}
@@ -80,16 +70,15 @@ export class RegistroComponent implements OnInit {
       alert("Las contraseñas no coinciden")
       return
     }
-    this.authService.signUp(this.user).subscribe(
-      res => {
-        console.log(res);
+    this.authService.signUp(this.user).subscribe({
+      next: res => {
         localStorage.setItem('token', res.token);
         this.router.navigate(['/datos-generales']);
       },
-      err => {
+      error: err => {
         console.log(err)
       }
-    )
+    })
   }
 
   validarNombre(cadena: string) : boolean {

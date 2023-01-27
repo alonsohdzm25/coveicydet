@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 import { AuthService } from 'src/app/services/auth.service';
+import { UserServiceService } from 'src/app/services/user.service.service';
 
 @Component({
   selector: 'app-datos-generales',
@@ -15,28 +16,22 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class DatosGeneralesComponent implements OnInit {
 
-  user: {
-    nombre: '',
-    apellidoPaterno: '',
-    apellidoMaterno: '',
-    rfc: '',
-    curp: '',
-    sexo: ''
+  user = {
+    nombre: "",
+    apellidoPaterno: "",
+    apellidoMaterno: "",
+    rfc: "",
+    curp: "",
+    sexo: ""
   }
 
   lista : string[] = ["Hombre", "Mujer", "No binario"]
   
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private userService: UserServiceService
     ) { 
-      this.user = {
-        nombre: '',
-        apellidoPaterno: '',
-        apellidoMaterno: '',
-        rfc: '',
-        curp: '',
-        sexo: ''
-      }
+      
     }
 
   ngOnInit(): void {
@@ -47,7 +42,20 @@ export class DatosGeneralesComponent implements OnInit {
   }
 
   guardar() {
-    console.log(this.user)
+    this.obtenerDatos()
+  }
+
+  obtenerDatos() {
+    this.userService.getUser().subscribe({
+      next: res => {
+        if(res.message == "Unauthorized") return alert("El token de usuario no es valido")
+        console.log(res)
+        this.user = res
+      },
+      error: err => {
+        console.log(err)
+      }
+    })
   }
 
 }
