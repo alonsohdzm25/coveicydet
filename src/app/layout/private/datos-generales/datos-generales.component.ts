@@ -8,47 +8,42 @@ import { UserServiceService } from '../../../services/user.service.service';
   styleUrls: ['./datos-generales.component.css'],
 })
 export class DatosGeneralesComponent implements OnInit {
-
   user = {
-    nombre: "",
-    apellidoPaterno: "",
-    apellidoMaterno: "",
-    rfc: "",
-    curp: "",
-    sexo: ""
-  }
+    nombre: '',
+    apellidoPaterno: '',
+    apellidoMaterno: '',
+    rfc: '',
+    curp: '',
+    sexo: '',
+  };
 
-  lista : string[] = ["Hombre", "Mujer", "No binario"]
-  
+  lista: string[] = ['Hombre', 'Mujer', 'No binario'];
+
   constructor(
     private authService: AuthService,
     private userService: UserServiceService
-    ) { 
-      
-    }
-
-  ngOnInit(): void {
+  ) {
+    this.obtenerDatos();
   }
+
+  ngOnInit(): void {}
 
   salir() {
     this.authService.logout();
   }
 
-  guardar() {
-    this.obtenerDatos()
-  }
+  guardar() {}
 
   obtenerDatos() {
-    
     this.userService.getUser().subscribe({
-      next: res => {
-        if(res.message == "Unauthorized") return alert("El token de usuario no es valido")
-        this.user = res
+      next: (res) => {
+        if (res.message == 'Unauthorized')
+          return alert('El token de usuario no es valido');
+        this.user = res;
       },
-      error: err => {
-        alert(err.message)
-      }
-    })
+      error: (err) => {
+        alert(err.message);
+      },
+    });
   }
-
 }

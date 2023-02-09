@@ -1,29 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
-  styleUrls: ['./contacto.component.css']
+  styleUrls: ['./contacto.component.css'],
 })
 export class ContactoComponent implements OnInit {
-
   contacto = {
     correoPersonal: '',
     correoInstitucional: '',
     telefono: '',
     celular: '',
     institucionLaboral: '',
-    adscripcion: ''
-  }
+    adscripcion: '',
+  };
 
-  constructor(
-    private authService: AuthService
-  ) { 
-  }
+  constructor(private authService: AuthService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   salir() {
     this.authService.logout();
@@ -32,5 +27,4 @@ export class ContactoComponent implements OnInit {
   guardar() {
     console.log(this.contacto);
   }
-
 }
