@@ -1,18 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
-import { AuthService } from 'src/app/services/auth.service';
-import { UserServiceService } from 'src/app/services/user.service.service';
+import { AuthService } from '../../../services/auth.service';
+import { UserServiceService } from '../../../services/user.service.service';
 
 @Component({
   selector: 'app-datos-generales',
   templateUrl: './datos-generales.component.html',
   styleUrls: ['./datos-generales.component.css'],
-  providers: [
-    {
-      provide: STEPPER_GLOBAL_OPTIONS,
-      useValue: {showError: true},
-    },
-  ],
 })
 export class DatosGeneralesComponent implements OnInit {
 

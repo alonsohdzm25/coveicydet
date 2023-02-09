@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpHeaders } from '@angular/common/http';
 
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -59,8 +57,6 @@ import { EstanciasComponent } from './layout/private/estancias/estancias.compone
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatStepperModule,
-    MatFormFieldModule,
     HttpClientModule
   ],
   providers: [
