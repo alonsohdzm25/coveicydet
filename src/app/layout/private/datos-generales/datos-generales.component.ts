@@ -46,14 +46,14 @@ export class DatosGeneralesComponent implements OnInit {
   }
 
   obtenerDatos() {
+    
     this.userService.getUser().subscribe({
       next: res => {
         if(res.message == "Unauthorized") return alert("El token de usuario no es valido")
-        console.log(res)
         this.user = res
       },
       error: err => {
-        console.log(err)
+        alert(err.message)
       }
     })
   }
